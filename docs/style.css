@@ -1,4 +1,4 @@
-/* Стиль для заголовка */
+
 .header {
     background-color: #ffcc00;
     text-align: center;
@@ -6,13 +6,13 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Стиль для головного заголовка */
+
 .title {
     font-size: 28px;
     color: #333;
 }
 
-/* Стиль для навігації */
+
 .nav {
     background-color: #333;
     padding: 10px;
