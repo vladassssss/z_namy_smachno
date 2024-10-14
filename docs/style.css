@@ -1,0 +1,54 @@
+/* Стиль для заголовка */
+.header {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Стиль для головного заголовка */
+.title {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Стиль для навігації */
+.nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #111;
+}
+
+/* Стиль для контенту */
+.section-content {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    font-family: 'Georgia', serif;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.section-text {
+    font-size: 18px;
+    color: #555;
+}
