@@ -3,7 +3,7 @@
     background-color: #ffcc00;
     text-align: center;
     padding: 10px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial';
 }
 
 
@@ -35,7 +35,6 @@
     background-color: #111;
 }
 
-/* Стиль для контенту */
 .section-content {
     padding: 20px;
     background-color: #f4f4f4;
