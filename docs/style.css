@@ -52,44 +52,5 @@
     font-size: 18px;
     color: #555;
 }
-/* Базова стилізація для макету */
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    height: 100vh;
-}
 
-header, footer {
-    background-color: #f8f9fa;
-    padding: 10px;
-    text-align: center;
-}
 
-main {
-    display: flex;
-    flex-grow: 1;
-    padding: 20px;
-}
-
-nav {
-    width: 200px;
-    background-color: #e9ecef;
-    padding: 10px;
-}
-
-.content {
-    flex-grow: 1;
-    padding: 20px;
-}
-
-.content h2 {
-    margin-top: 0;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
