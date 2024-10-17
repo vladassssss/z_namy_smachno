@@ -18,9 +18,9 @@
 }
 
 .sidebar-left, .sidebar-right {
-    width: 200px; 
+    width: 20px; 
     background-color: #f0f0f0;
-    padding: 15px;
+    padding: 10px;
 }
 
 .sidebar-left {
