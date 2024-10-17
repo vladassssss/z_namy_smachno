@@ -51,8 +51,7 @@
     font-size: 18px;
     color: #555;
 }
-
-    body {
+  body {
             display: flex;
             flex-direction: column;
             font-family: Arial, sans-serif;
@@ -101,3 +100,4 @@
             padding: 10px;
             background-color: #f8d7da;
         }
+  
