@@ -14,7 +14,7 @@ header, footer {
 
 .container {
     display: flex;
-    flex: 1; /* Займає весь доступний простір між заголовком і підвалом */
+    flex: 0.5; /* Займає весь доступний простір між заголовком і підвалом */
 }
 
 .sidebar-left, .sidebar-right {
