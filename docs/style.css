@@ -52,4 +52,52 @@
     color: #555;
 }
 
-
+    body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8d7da;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f1f1f1;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar-left {
+            width: 200px;
+            background-color: #f1f1f1;
+            padding: 15px;
+        }
+        .sidebar-right {
+            width: 200px;
+            background-color: #f1f1f1;
+            padding: 15px;
+        }
+        section {
+            flex: 1;
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8d7da;
+        }
