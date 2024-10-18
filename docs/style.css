@@ -1,29 +1,44 @@
-/* style.css */
-body {
-    margin: 10;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Забезпечує мінімальну висоту всього документа */
+/* Стиль для заголовка */
+.header {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
 }
 
-header, footer {
-    background-color: #f0f0f0;
+/* Стиль для навігаційного меню */
+.nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav ul {
+    list-style-type: none; /* Прибираємо маркери */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav ul li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Стиль для секції контенту */
+.section-content {
     padding: 20px;
-}
-
-.container {
-    display: flex;
-    flex: 0.5; /* Займає весь доступний простір між заголовком і підвалом */
-}
-
-.sidebar-left, .sidebar-right {
-    width: 20%; /* Ширина сайдбарів */
-    background-color: #f5f5f5;
-    padding: 20px;
-}
-
-.main-content {
-    flex: 1; /* Займає решту доступного простору */
-    padding: 20px;
+    font-size: 18px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    font-family: 'Georgia', serif;
 }
