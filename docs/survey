@@ -1,0 +1,30 @@
+// Встановлюємо обробник для форми
+document.getElementById('surveyForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Запобігаємо стандартному відправленню форми
+    
+    // Отримуємо значення з форми
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+
+    // Створюємо об'єкт для збереження даних
+    const surveyData = {
+        name: name,
+        email: email,
+        feedback: feedback,
+        timestamp: new Date().toISOString() // Додаємо дату та час
+    };
+
+    // Зберігаємо дані в локальному файлі
+    saveDataToFile(surveyData);
+
+    // Показуємо повідомлення користувачу
+    alert('Дякуємо за ваш відгук!');
+});
+
+// Функція для збереження даних у файл
+function saveDataToFile(data) {
+    const existingData = JSON.parse(localStorage.getItem('surveyData')) || [];
+    existingData.push(data);
+    localStorage.setItem('surveyData', JSON.stringify(existingData));
+}
