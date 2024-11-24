@@ -14,7 +14,7 @@
                 date: new Date().toLocaleString() // Поточна дата та час
             };
 
-            // Створюємо JSON строку для збереження (наприклад, для тестування)
+
             const surveyJSON = JSON.stringify(surveyData);
 
             // Зберігаємо дані у файл
@@ -23,7 +23,5 @@
             link.href = URL.createObjectURL(blob);
             link.download = 'survey_feedback_' + new Date().toISOString() + '.json';
             link.click();
-
-            // Показуємо повідомлення про успішне надсилання
             document.getElementById('result').innerHTML = `<p>Ваш відгук успішно надіслано! Дякуємо за участь.</p>`;
         });
