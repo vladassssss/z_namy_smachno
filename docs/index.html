@@ -18,47 +18,34 @@
         .title {
             font-size: 28px;
             color: #333;
+            cursor: pointer; /* Додає ефект "курсор руки", коли користувач наводить на заголовок */
         }
         .nav {
             background-color: #333;
             padding: 10px;
         }
-    
-    .nav-content {
-        display: flex;
-        justify-content: space-between; /* Розташовує елементи по краях */
-        align-items: center; /* Вирівнювання елементів по вертикалі */
-    }
-    .nav-images {
-        display: flex;
-        gap: 10px; /* Відстань між зображеннями */
-    }
-    .nav-list {
-        display: flex;
-        justify-content: center; /* Розташовує список у центрі */
-        align-items: center;
-        flex-grow: 1; /* Розтягує для зайняття доступного простору */
-    }
-    .nav-link {
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-    }
-    .nav-link:hover {
-        background-color: #111;
-    }
-
-
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .nav-images {
             display: flex;
-            gap: 10px; /* Відстань між зображеннями */
+            gap: 10px;
         }
-        .nav-image {
-            width: 50px; /* Ширина зображення */
-            height: 50px; /* Висота зображення */
-            object-fit: cover; /* Пропорційне відображення */
-            border-radius: 5px; /* Закруглення куточків (опціонально) */
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .nav-link {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            background-color: #111;
         }
         .container {
             display: flex;
@@ -124,7 +111,6 @@
         <section class="section-content">
             <h2 class="section-title">Всім прекрасної доби, вас вітає кулінарний сайт znamysmachno</h2>
             <p class="section-text">Дізнайтесь, як приготувати смачну лазанью з м'ясним соусом! Точно не пошкодуєте що обрали саме цей варіант. Насолоджуйтеся процесом та результатом.</p>
-            <button id="changeColorBtn">Змінити колір заголовка</button>
         </section>
     </div>
     <footer>
@@ -132,8 +118,8 @@
     </footer>
 
     <script>
-        // JavaScript код для зміни кольору заголовка при натисканні кнопки
-        document.getElementById("changeColorBtn").addEventListener("click", function() {
+        // JavaScript код для зміни кольору заголовка при натисканні на нього
+        document.getElementById("title").addEventListener("click", function() {
             const title = document.getElementById("title");
             title.style.color = "blue";  // Зміна кольору заголовка
             title.style.fontSize = "36px";  // Зміна розміру шрифта
@@ -142,4 +128,3 @@
     </script>
 </body>
 </html>
-
