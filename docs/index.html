@@ -23,11 +23,16 @@
             background-color: #333;
             padding: 10px;
         }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .nav-list {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            text-align: center;
+            display: flex;
         }
         .nav-link {
             color: white;
@@ -36,6 +41,16 @@
         }
         .nav-link:hover {
             background-color: #111;
+        }
+        .nav-images {
+            display: flex;
+            gap: 10px; /* Відстань між зображеннями */
+        }
+        .nav-image {
+            width: 50px; /* Ширина зображення */
+            height: 50px; /* Висота зображення */
+            object-fit: cover; /* Пропорційне відображення */
+            border-radius: 5px; /* Закруглення куточків (опціонально) */
         }
         .container {
             display: flex;
@@ -74,16 +89,21 @@
         <h1 class="title">Лазанья з м'ясним соусом</h1>
     </header>
     <nav class="nav">
-        <ul class="nav-list">
-            <li><a class="nav-link" href="index.html">Головна</a></li>
-            <li><a class="nav-link" href="ingredients.html">Інгредієнти</a></li>
-            <li><a class="nav-link" href="bolognese.html">Соус "Болоньєзе"</a></li>
-            <li><a class="nav-link" href="bechamel.html">Соус "Бешамель"</a></li>
-            <li><a class="nav-link" href="assembly.html">Збирання лазаньї</a></li>
-            <li><a class="nav-link" href="baking.html">Випікання та подача</a></li>
-        </ul>
+        <div class="nav-content">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Головна</a></li>
+                <li><a class="nav-link" href="ingredients.html">Інгредієнти</a></li>
+                <li><a class="nav-link" href="bolognese.html">Соус "Болоньєзе"</a></li>
+                <li><a class="nav-link" href="bechamel.html">Соус "Бешамель"</a></li>
+                <li><a class="nav-link" href="assembly.html">Збирання лазаньї</a></li>
+                <li><a class="nav-link" href="baking.html">Випікання та подача</a></li>
+            </ul>
+            <div class="nav-images">
+                <img src="jh.jpg" alt="Фото 1" class="nav-image">
+                <img src="jh.jpg" alt="Фото 2" class="nav-image">
+            </div>
+        </div>
     </nav>
-
     <div class="container">
         <div class="sidebar-right">
             <h3>Інші рецепти</h3>
@@ -98,7 +118,6 @@
             <p class="section-text">Дізнайтесь, як приготувати смачну лазанью з м'ясним соусом! Точно не пошкодуєте що обрали саме цей варіант. Насолоджуйтеся процесом та результатом.</p>
         </section>
     </div>
-
     <footer>
         <p>© 2024 Кулінарний сайт. Всі права захищені.</p>
     </footer>
