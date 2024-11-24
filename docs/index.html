@@ -23,24 +23,32 @@
             background-color: #333;
             padding: 10px;
         }
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-list {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        .nav-link {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-        .nav-link:hover {
-            background-color: #111;
+    
+    .nav-content {
+        display: flex;
+        justify-content: space-between; /* Розташовує елементи по краях */
+        align-items: center; /* Вирівнювання елементів по вертикалі */
+    }
+    .nav-images {
+        display: flex;
+        gap: 10px; /* Відстань між зображеннями */
+    }
+    .nav-list {
+        display: flex;
+        justify-content: center; /* Розташовує список у центрі */
+        align-items: center;
+        flex-grow: 1; /* Розтягує для зайняття доступного простору */
+    }
+    .nav-link {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+    .nav-link:hover {
+        background-color: #111;
+    }
+
+
         }
         .nav-images {
             display: flex;
