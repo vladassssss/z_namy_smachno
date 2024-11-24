@@ -94,7 +94,7 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="title">Лазанья з м'ясним соусом</h1>
+        <h1 class="title" id="title">Лазанья з м'ясним соусом</h1>
     </header>
     <nav class="nav">
         <div class="nav-content">
@@ -124,10 +124,22 @@
         <section class="section-content">
             <h2 class="section-title">Всім прекрасної доби, вас вітає кулінарний сайт znamysmachno</h2>
             <p class="section-text">Дізнайтесь, як приготувати смачну лазанью з м'ясним соусом! Точно не пошкодуєте що обрали саме цей варіант. Насолоджуйтеся процесом та результатом.</p>
+            <button id="changeColorBtn">Змінити колір заголовка</button>
         </section>
     </div>
     <footer>
         <p>© 2024 Кулінарний сайт. Всі права захищені.</p>
     </footer>
+
+    <script>
+        // JavaScript код для зміни кольору заголовка при натисканні кнопки
+        document.getElementById("changeColorBtn").addEventListener("click", function() {
+            const title = document.getElementById("title");
+            title.style.color = "blue";  // Зміна кольору заголовка
+            title.style.fontSize = "36px";  // Зміна розміру шрифта
+            title.style.transition = "all 0.5s ease";  // Плавний перехід
+        });
+    </script>
 </body>
 </html>
+
