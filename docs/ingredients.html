@@ -12,6 +12,9 @@
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1, h2 {
@@ -21,70 +24,67 @@
 
         header {
             background-color: #ffcc00;
+            width: 100%;
             padding: 20px;
             text-align: center;
             border-bottom: 2px solid #e67e22;
         }
 
-        .header-content h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-
         nav {
             background-color: #333;
             padding: 10px 0;
+            text-align: center;
         }
 
-        .nav-content ul {
+        nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            justify-content: center;
+            display: inline-flex;
             gap: 20px;
         }
 
-        .nav-content a {
+        nav a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             padding: 8px 15px;
         }
 
-        .nav-content a:hover {
+        nav a:hover {
             background-color: #555;
             border-radius: 5px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-        }
-
-        .block-title {
-            font-size: 1.8em;
-            text-align: center;
-            margin-bottom: 10px;
-            color: #e67e22;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
         .block {
+            flex: 1 1 300px;
+            min-width: 300px;
+            max-width: 400px;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
             background: #fff;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            text-align: center;
         }
 
         ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         ul li {
@@ -95,7 +95,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin: 0 auto;
         }
 
         table th, table td {
@@ -110,8 +110,8 @@
         }
 
         iframe {
-            display: block;
-            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
             border-radius: 5px;
         }
 
@@ -121,6 +121,7 @@
             background-color: #ffcc00;
             border-top: 2px solid #e67e22;
             font-size: 14px;
+            width: 100%;
         }
     </style>
 </head>
@@ -140,7 +141,7 @@
     </header>
     <main class="container">
         <div class="block">
-            <h2 class="block-title">Список інгредієнтів</h2>
+            <h2>Список інгредієнтів</h2>
             <ul>
                 <li>Листи лазаньї - 12 шт.</li>
                 <li>Фарш яловичий - 500 г</li>
@@ -153,7 +154,7 @@
             </ul>
         </div>
         <div class="block">
-            <h2 class="block-title">Таблиця поживної цінності</h2>
+            <h2>Таблиця поживної цінності</h2>
             <table>
                 <thead>
                     <tr>
@@ -190,13 +191,13 @@
             </table>
         </div>
         <div class="block">
-            <h2 class="block-title">Відео приготування лазаньї</h2>
+            <h2>Відео приготування лазаньї</h2>
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QZloaLmvSP0?si=zyGVG5yT9mXNdsDt&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 znamysmachno</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
+
