@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
     <title>Інгредієнти</title>
-           <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             color: #333;
@@ -66,19 +66,53 @@
             border-radius: 8px;
         }
 
-        .section-content h2 {
-            margin-bottom: 15px;
+        .block-title {
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 10px;
             color: #e67e22;
         }
 
-        .section-content ul {
+        .block {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        ul {
             list-style: none;
             padding: 0;
         }
 
-        .section-content li {
+        ul li {
             margin-bottom: 10px;
             font-size: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
         }
 
         footer {
@@ -89,7 +123,6 @@
             font-size: 14px;
         }
     </style>
-
 </head>
 <body>
     <header>
@@ -105,61 +138,65 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Список інгредієнтів</h2>
-        <ul>
-            <li>Листи лазаньї - 12 шт.</li>
-            <li>Фарш яловичий - 500 г</li>
-            <li>Цибуля - 1 шт.</li>
-            <li>Томатний соус - 400 мл</li>
-            <li>Молоко - 1 л</li>
-            <li>Борошно - 100 г</li>
-            <li>Твердий сир (моцерела) - 200 г</li>
-            <li>Сіль, перець, спеції - за смаком</li>
-        </ul>
-
-        <h2>Таблиця поживної цінності</h2>
-        <table border="1">
-  
-            <tr>
-                <th>Інгредієнт</th>
-                <th>Калорії</th>
-                <th>Білки</th>
-                <th>Жири</th>
-                <th>Вуглеводи</th>
-            </tr>
-            <tr>
-                <td>Листи лазаньї</td>
-                <td>130</td>
-                <td>5 г</td>
-                <td>1 г</td>
-                <td>26 г</td>
-            </tr>
-            <tr>
-                <td>Фарш яловичий</td>
-                <td>250</td>
-                <td>20 г</td>
-                <td>20 г</td>
-                <td>0 г</td>
-            </tr>
-            <tr>
-                <td>Томатний соус</td>
-                <td>50</td>
-                <td>2 г</td>
-                <td>0 г</td>
-                <td>12 г</td>
-            </tr>
-        </table>
-
-
-    
-
-        <h2>Відео приготування лазаньї</h2>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QZloaLmvSP0?si=zyGVG5yT9mXNdsDt&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <main class="container">
+        <div class="block">
+            <h2 class="block-title">Список інгредієнтів</h2>
+            <ul>
+                <li>Листи лазаньї - 12 шт.</li>
+                <li>Фарш яловичий - 500 г</li>
+                <li>Цибуля - 1 шт.</li>
+                <li>Томатний соус - 400 мл</li>
+                <li>Молоко - 1 л</li>
+                <li>Борошно - 100 г</li>
+                <li>Твердий сир (моцерела) - 200 г</li>
+                <li>Сіль, перець, спеції - за смаком</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h2 class="block-title">Таблиця поживної цінності</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Інгредієнт</th>
+                        <th>Калорії</th>
+                        <th>Білки</th>
+                        <th>Жири</th>
+                        <th>Вуглеводи</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Листи лазаньї</td>
+                        <td>130</td>
+                        <td>5 г</td>
+                        <td>1 г</td>
+                        <td>26 г</td>
+                    </tr>
+                    <tr>
+                        <td>Фарш яловичий</td>
+                        <td>250</td>
+                        <td>20 г</td>
+                        <td>20 г</td>
+                        <td>0 г</td>
+                    </tr>
+                    <tr>
+                        <td>Томатний соус</td>
+                        <td>50</td>
+                        <td>2 г</td>
+                        <td>0 г</td>
+                        <td>12 г</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="block">
+            <h2 class="block-title">Відео приготування лазаньї</h2>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QZloaLmvSP0?si=zyGVG5yT9mXNdsDt&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 znamysmachno</p>
     </footer>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
