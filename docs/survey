@@ -28,3 +28,11 @@ function saveDataToFile(data) {
     existingData.push(data);
     localStorage.setItem('surveyData', JSON.stringify(existingData));
 }
+// Створення текстового файлу з відповідями
+$filename = 'survey/survey_feedback_' . date('Y-m-d_H-i-s') . '.txt';
+$content = "Ім'я: $name\nEmail: $email\nВідгук: $feedback\nДата: " . date('Y-m-d H:i:s');
+
+saveToFile($content, $filename);
+
+echo "Ваш відгук успішно надіслано!";
+?>
