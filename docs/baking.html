@@ -142,18 +142,19 @@
 
         <!-- Форма опитування -->
         <h2>Опитування</h2>
-        <form id="surveyForm" class="survey-form">
-            <label for="name">Ваше ім'я:</label>
-            <input type="text" id="name" name="name" required>
+      <form id="surveyForm" class="survey-form" action="process_survey.php" method="POST">
+    <label for="name">Ваше ім'я:</label>
+    <input type="text" id="name" name="name" required>
 
-            <label for="email">Ваш Email:</label>
-            <input type="email" id="email" name="email" required>
+    <label for="email">Ваш Email:</label>
+    <input type="email" id="email" name="email" required>
 
-            <label for="feedback">Ваші враження від рецепту:</label>
-            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+    <label for="feedback">Ваші враження від рецепту:</label>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea>
 
-            <button type="submit">Надіслати відгук</button>
-        </form>
+    <button type="submit">Надіслати відгук</button>
+</form>
+
 
         <div id="result"></div>
     </section>
