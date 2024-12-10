@@ -1,38 +1,40 @@
-// Встановлюємо обробник для форми
-document.getElementById('surveyForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Запобігаємо стандартному відправленню форми
-    
-    // Отримуємо значення з форми
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const feedback = document.getElementById('feedback').value;
+<?php
+// Перевірка, чи відправлена форма
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Отримуємо дані з форми
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $question1 = htmlspecialchars($_POST['question1']);
+    $question2 = htmlspecialchars($_POST['question2']);
+    $question3 = htmlspecialchars($_POST['question3']);
+    $timestamp = date('Y-m-d H:i:s');
 
-    // Створюємо об'єкт для збереження даних
-    const surveyData = {
-        name: name,
-        email: email,
-        feedback: feedback,
-        timestamp: new Date().toISOString() // Додаємо дату та час
-    };
+    // Створюємо папку "survey", якщо вона не існує
+    $surveyFolder = "survey";
+    if (!file_exists($surveyFolder)) {
+        mkdir($surveyFolder, 0777, true);
+    }
 
-    // Зберігаємо дані в локальному файлі
-    saveDataToFile(surveyData);
+    // Формуємо вміст файлу
+    $fileContent = "Ім'я: $name\n";
+    $fileContent .= "Email: $email\n";
+    $fileContent .= "Оцінка рецепту: $question1\n";
+    $fileContent .= "Пропозиції: $question2\n";
+    $fileContent .= "Чи порадить рецепт: $question3\n";
+    $fileContent .= "Дата та час: $timestamp\n";
 
-    // Показуємо повідомлення користувачу
-    alert('Дякуємо за ваш відгук!');
-});
+    // Генеруємо ім'я файлу
+    $fileName = $surveyFolder . "/survey_" . date('Y-m-d_H-i-s') . ".txt";
 
-// Функція для збереження даних у файл
-function saveDataToFile(data) {
-    const existingData = JSON.parse(localStorage.getItem('surveyData')) || [];
-    existingData.push(data);
-    localStorage.setItem('surveyData', JSON.stringify(existingData));
+    // Зберігаємо дані у файл
+    file_put_contents($fileName, $fileContent);
+
+    // Виводимо підтвердження
+    echo "<h1>Дякуємо за ваш відгук!</h1>";
+    echo "<p>Дата та час відправлення: $timestamp</p>";
+    echo "<p>Ваші відповіді успішно збережені.</p>";
+} else {
+    echo "<h1>Форма не відправлена.</h1>";
 }
-// Створення текстового файлу з відповідями
-$filename = 'survey/survey_feedback_' . date('Y-m-d_H-i-s') . '.txt';
-$content = "Ім'я: $name\nEmail: $email\nВідгук: $feedback\nДата: " . date('Y-m-d H:i:s');
-
-saveToFile($content, $filename);
-
-echo "Ваш відгук успішно надіслано!";
 ?>
+
